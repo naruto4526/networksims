@@ -8,9 +8,9 @@ const DraggableBox = ({id,step,path,readInput,readNumber,handleClick}) => {
     const updateXarrow = useXarrow();
 
     const str = (id,path,step) => {
-        if(path == null || step == -1)return;
+        if(path === null || step === -1)return;
         if(parseInt(id) !== path[step][0])return;
-        if(step == path.length-1)return 'Reached';
+        if(step === path.length-1)return 'Reached';
         const data = 'data';
         const s = `${path[(step + 1)%path.length][2]} ${path[step][2]} ${path[0][1]} ${path[path.length-1][1]} ${data}`;
         console.log(s);

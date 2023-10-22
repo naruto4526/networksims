@@ -54,7 +54,7 @@ const handleAdd = () =>{
   setNum(num=>num+1)
 }
 const handleSub = () => {
-  if(num == 0)return;
+  if(num === 0)return;
   let temp = alpha.slice(0,num-1);
   setAlpha(temp);
   temp = number.slice(0,num-1);
@@ -102,13 +102,17 @@ const handlePlay = () => {
       <div style = {{display: 'flex', justifyContent: 'space-evenly', width: '100%'}}>
       <button onClick={handleAdd} style = {button}>
         <img src = 'https://static.vecteezy.com/system/resources/thumbnails/001/500/603/small/add-icon-free-vector.jpg'
+        alt = 'text'
         style = {image}/>
       </button>
       <button onClick={handleSub} style = {button}> <img src = 'https://cdn.icon-icons.com/icons2/494/PNG/512/circle-minus_icon-icons.com_48330.png'
+      alt = 'text'
         style = {{marginTop:'0.17rem',width:'2.5rem',height:'2.5rem',opacity:'0.7'}}/></button>
       <button onClick={handleEdge} style = {button}> <img src = 'https://static-00.iconduck.com/assets.00/arrow-right-circle-icon-512x512-2p1e2aaw.png'
+      alt = 'text'
         style = {{marginTop:'0.17rem',width:'2.5rem',height:'2.5rem',opacity:'0.8'}} draggable= {false}/></button>
       <button onClick={handlePlay} style = {button}><img src = 'https://static.vecteezy.com/system/resources/previews/000/630/395/non_2x/play-button-icon-design-illustration-vector.jpg'
+      alt = 'text'
         style = {{marginTop:'0rem',width:'3rem',height:'3rem'}} draggable= {false}/></button>
       <label>Source 
       <input onChange = {(event)=> {setSource(event.target.value)}}></input>
