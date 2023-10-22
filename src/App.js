@@ -54,6 +54,7 @@ const handleAdd = () =>{
   setNum(num=>num+1)
 }
 const handleSub = () => {
+  if(num == 0)return;
   let temp = alpha.slice(0,num-1);
   setAlpha(temp);
   temp = number.slice(0,num-1);
