@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# A website that simulates a part of data packet transmission over a network
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
