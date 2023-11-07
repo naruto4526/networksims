@@ -20,7 +20,7 @@ const DraggableBox = ({id,step,path,readInput,readNumber,handleClick}) => {
     return (
         <Draggable onDrag={updateXarrow} onStop={updateXarrow} >
             <div id={id} style={boxStyle} onClick={() => handleClick(id)}>
-              <div style = {{border: 'grey solid 2px',margin:'auto',width:'80%',height:'1rem',padding:'0.2rem'}}>{str(id,path,step)}</div>
+              <div style = {{border: 'grey solid 2px',margin:'auto',width:'65%',height:'1rem',padding:'0.1rem',fontSize:'0.8rem',fontWeight:'bold'}}>{str(id,path,step)}</div>
               <img src = 'https://static.vecteezy.com/system/resources/thumbnails/000/569/512/small/vector60-3879-01.jpg' style = {{width:'6rem',height:'6rem'}} draggable = {false} alt = 'computer'/>
                 <div style = {{display:'flex',justifyContent:'space-evenly', width:'100%',margin:'0.1rem'}}>
                 <input style = {{width:'1rem',border: 'black solid 0.1rem',paddingLeft:'0.5rem',borderRadius:'5px'}} onChange={(event)=> readInput(event,parseInt(id))}/>

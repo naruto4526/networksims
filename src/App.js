@@ -3,8 +3,8 @@ import Arrow from './arrow';
 import bfs from './explore';
 import './App.css';
 
-const button = {width:'2rem',height:'2rem',border:'0px',backgroundColor:'white'}
-const image = {width:'3rem',height:'3rem'}
+const button = {fontSize:'1.1rem',padding:'0.5rem',borderWidth:'1.5px', borderRadius:'10px',backgroundColor:'white'}
+
 function App() {
 
   const [num,setNum] = useState(1);
@@ -98,27 +98,17 @@ const handlePlay = () => {
     <div style = {{margin:100}}>
     <Arrow num = {num} edges = {edges} readInput={readInput} readNumber={readNumber} handleClick = {handleClick} step = {step} path = {path}/>
     </div>
-    <div style = {{justifyContent:'space-between',margin:'auto',width:'70%',position:'fixed',bottom:'5rem',left:'5rem'}}>
-      <div style = {{display: 'flex', justifyContent: 'space-evenly', width: '100%'}}>
-      <button onClick={handleAdd} style = {button}>
-        <img src = 'https://static.vecteezy.com/system/resources/thumbnails/001/500/603/small/add-icon-free-vector.jpg'
-        alt = 'text'
-        style = {image}/>
-      </button>
-      <button onClick={handleSub} style = {button}> <img src = 'https://cdn.icon-icons.com/icons2/494/PNG/512/circle-minus_icon-icons.com_48330.png'
-      alt = 'text'
-        style = {{marginTop:'0.17rem',width:'2.5rem',height:'2.5rem',opacity:'0.7'}}/></button>
-      <button onClick={handleEdge} style = {button}> <img src = 'https://static-00.iconduck.com/assets.00/arrow-right-circle-icon-512x512-2p1e2aaw.png'
-      alt = 'text'
-        style = {{marginTop:'0.17rem',width:'2.5rem',height:'2.5rem',opacity:'0.8'}} draggable= {false}/></button>
-      <button onClick={handlePlay} style = {button}><img src = 'https://static.vecteezy.com/system/resources/previews/000/630/395/non_2x/play-button-icon-design-illustration-vector.jpg'
-      alt = 'text'
-        style = {{marginTop:'0rem',width:'3rem',height:'3rem'}} draggable= {false}/></button>
-      <label>Source 
-      <input onChange = {(event)=> {setSource(event.target.value)}}></input>
+    <div style = {{justifyContent:'space-between',margin:'auto',width:'80%',position:'fixed',bottom:'5rem',left:'5rem'}}>
+      <div style = {{display: 'flex', justifyContent: 'space-evenly', width: '100%',backgroundColor:'#303030',color:'white',borderRadius:'20px',padding:'0.5rem'}}>
+      <button onClick={handleAdd} style = {button}>+</button>
+      <button onClick={handleSub} style = {button}>-</button>
+      <button onClick={handleEdge} style = {button}> {"<=>"}</button>
+      <button onClick={handlePlay} style = {button}>Run</button>
+      <label style = {{fontSize:'1.2rem',marginTop:'0.2rem'}}>Source:
+      <input onChange = {(event)=> {setSource(event.target.value)}} style = {{marginLeft:'0.4rem',width:'0.8rem'}}></input>
       </label>
-      <label>Destination 
-      <input onChange = {(event)=> {setDestination(event.target.value)}}></input>
+      <label style = {{fontSize:'1.2rem',marginTop:'0.2rem'}}>Destination: 
+      <input onChange = {(event)=> {setDestination(event.target.value)}} style = {{marginLeft:'0.4rem',width:'0.8rem'}}></input>
       </label>
       </div>
     </div>
