@@ -3,7 +3,7 @@ import Arrow from './arrow';
 import bfs from './explore';
 import './App.css';
 
-const button = {fontSize:'1.1rem',padding:'0.5rem',borderWidth:'1.5px', borderRadius:'10px',backgroundColor:'white'}
+const button = {fontSize:'1.1rem',padding:'0.5rem',borderWidth:'1.5px', borderRadius:'10px',backgroundColor:'white',cursor:'pointer'}
 
 function App() {
 
